@@ -3,7 +3,7 @@ package com.wishlistmongoDB.wishlistmongoDB.service;
 import com.wishlistmongoDB.wishlistmongoDB.entity.Produto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.ProdutoRepository;
+import com.wishlistmongoDB.wishlistmongoDB.repository.ProdutoRepository;
 
 @Service
 public class ProdutoService {
@@ -16,7 +16,7 @@ public class ProdutoService {
     }
 
     public Produto buscarProduto(String id) {
-        return produtoRepository.findByID(id);
+        return produtoRepository.findById(id).get();
     }
 
     public Produto atualizaProduto(Produto produto) {

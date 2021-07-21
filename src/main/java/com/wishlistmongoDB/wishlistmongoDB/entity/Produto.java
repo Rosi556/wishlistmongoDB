@@ -3,9 +3,6 @@ package com.wishlistmongoDB.wishlistmongoDB.entity;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Document

@@ -3,10 +3,10 @@ package com.wishlistmongoDB.wishlistmongoDB.service;
 import com.wishlistmongoDB.wishlistmongoDB.entity.Cliente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.ClienteRepository;
+import com.wishlistmongoDB.wishlistmongoDB.repository.ClienteRepository;
 
 @Service
-public class ClienteService implements ClienteService {
+public class ClienteService  {
 
     @Autowired
     private ClienteRepository clienteRepository;
@@ -17,7 +17,7 @@ public class ClienteService implements ClienteService {
 
     public Cliente buscarCliente(String id)
     {
-        return clienteRepository.findById(id);
+        return clienteRepository.findById(id).get();
     }
 
     public Cliente atualizarCliente(Cliente cliente)
@@ -30,6 +30,6 @@ public class ClienteService implements ClienteService {
     }
 
     public Cliente findById(String id) {
-        return clienteRepository.findById(id);
+        return clienteRepository.findById(id).get();
     }
 }

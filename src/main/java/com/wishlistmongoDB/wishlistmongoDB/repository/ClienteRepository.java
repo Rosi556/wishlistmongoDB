@@ -1,15 +1,12 @@
-package repository;
+package com.wishlistmongoDB.wishlistmongoDB.repository;
 
 import com.wishlistmongoDB.wishlistmongoDB.entity.Cliente;
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
-
+@Repository
 public interface ClienteRepository extends MongoRepository<Cliente, String> {
 
-   Cliente findById(String id) ;
-
-    Cliente save(Cliente cliente);
 
 
 }

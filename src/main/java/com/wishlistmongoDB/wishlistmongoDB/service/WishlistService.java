@@ -5,7 +5,7 @@ import com.wishlistmongoDB.wishlistmongoDB.entity.Produto;
 import com.wishlistmongoDB.wishlistmongoDB.entity.Wishlist;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.WishlistRepository;
+import com.wishlistmongoDB.wishlistmongoDB.repository.WishlistRepository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +52,7 @@ public class WishlistService {
 
     //Metodo para saber se o cliente existe
     public Wishlist procurarPeloIdCliente(String id) {
-        return WishlistRepository.findByClienteID(id);
+        return wishlistRepository.findByClienteId(id);
 
     }
 }
